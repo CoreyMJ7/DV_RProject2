@@ -15,7 +15,7 @@ for(n in names(df)) {
   df[n] <- data.frame(lapply(df[n], gsub, pattern="[^ -~]",replacement= ""))
 }
 
-dimensions <- setdiff(Bank Name(df), City(df),ST(df),Acquiring Institution(df),Closing Data(df),Updated Date(df),measures)
+dimensions <- setdiff(names(df), measures)
 if( length(measures) > 1 || ! is.na(dimensions)) {
   for(d in dimensions) {
     # Get rid of " and ' in dimensions.
