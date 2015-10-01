@@ -1,29 +1,33 @@
-setwd("C:/Users/Nathan R/Documents/DataVisualization/Project 2/01 Data")
+setwd("C:/Users/Corey/Documents/DataVisualization/DV_RProject2/01 Data")
 
 file_path <- "banklist.csv"
 
 df <- rename(banklist, tbl = table) # table is a reserved word in Oracle so rename it to tbl.
 
-# str(df) # Uncomment this and  run just the lines to here to get column types to use for getting the list of measures.
+ str(df) # Uncomment this and  run just the lines to here to get column types to use for getting the list of measures.
 
-measures <- c("Bank Name","City", "ST", "CERT", "Acquiring Institution", "Closing Date", "Updated Date")
+measures <- c("CERT", "Closing Date", "Updated Date")
 #measures <- NA # Do this if there are no measures.
 
 # Get rid of special characters in each column.
 # Google ASCII Table to understand the following:
 for(n in names(df)) {
+<<<<<<< HEAD
   df[n] <- data.frame(lapply(df[n], gsub, pattern="[^ -~]",replacement= ""))
+=======
+    df[n] <- data.frame(lapply(df[n], gsub, pattern="[^ -~]", replacement= ""))
+>>>>>>> 216bf691569aa58e3899a51141831cc21b98762a
 }
 
 dimensions <- setdiff(names(df), measures)
 if( length(measures) > 1 || ! is.na(dimensions)) {
   for(d in dimensions) {
     # Get rid of " and ' in dimensions.
-    df[d] <- data.frame(lapply(df[d], gsub, pattern="[\"']",replacement= ""))
+    df[d] <- data.frame(lapply(df[d], gsub, pattern="[\"']", replacement= ""))
     # Change & to and in dimensions.
-    df[d] <- data.frame(lapply(df[d], gsub, pattern="&",replacement= " and "))
+    df[d] <- data.frame(lapply(df[d], gsub, pattern="&", replacement= " and "))
     # Change : to ; in dimensions.
-    df[d] <- data.frame(lapply(df[d], gsub, pattern=":",replacement= ";"))
+    df[d] <- data.frame(lapply(df[d], gsub, pattern=":", replacement= ";"))
   }
 }
 
