@@ -1,0 +1,17 @@
+{
+    "contents" : "tbl_df(df)\nView(df)\n\ndf %>% select(YEAR, RANK) %>% filter(YEAR %in% c(\"1955\", \"2004\")) %>% View\nx <- df %>% group_by(RANK) %>% select(COMPANY, YEAR) %>% filter(RANK < 6) %>% arrange(YEAR) %>% View\ny <- df %>% select(COMPANY, REVENUE_IN_MILLIONS_, PROFIT_IN_MILLIONS_, YEAR, RANK) %>% filter(YEAR %in% c(\"1955\", \"2004\")) %>% arrange(RANK) %>% View\n",
+    "created" : 1443748180934.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3562001348",
+    "id" : "4654B424",
+    "lastKnownWriteTime" : 1443807879,
+    "path" : "~/DataVisualization/DV_RProject2/02 Data Wrangling/Fortune500 Wrangling.R",
+    "project_path" : "02 Data Wrangling/Fortune500 Wrangling.R",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
