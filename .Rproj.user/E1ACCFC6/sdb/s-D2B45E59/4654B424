@@ -1,0 +1,17 @@
+{
+    "contents" : "tbl_df(df)\nView(df)\n\n#v <- df %>% select(COMPANY, YEAR, PROFIT_IN_MILLIONS_, REVENUE_IN_MILLIONS_)  %>% filter(YEAR == 1955) %>% mutate(rev_percent = cume_dist(as.numeric(REVENUE_IN_MILLIONS_))) %>% tbl_df\n#x <- df %>% group_by(RANK, YEAR) %>% select(COMPANY, YEAR, PROFIT_IN_MILLIONS_) %>% filter(RANK < 6, YEAR<2005) %>% tbl_df\n#y <- df %>% select(COMPANY, REVENUE_IN_MILLIONS_, PROFIT_IN_MILLIONS_, YEAR, RANK) %>% filter(YEAR %in% c(\"1955\", \"2004\")) %>% arrange(RANK) %>% tbl_df\n#View(v)\n#View(x)\n#View(y)\n\n",
+    "created" : 1443748180934.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3305307214",
+    "id" : "4654B424",
+    "lastKnownWriteTime" : 1443819290,
+    "path" : "~/DataVisualization/DV_RProject2/02 Data Wrangling/Fortune500 Wrangling.R",
+    "project_path" : "02 Data Wrangling/Fortune500 Wrangling.R",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
