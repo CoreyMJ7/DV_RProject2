@@ -2,7 +2,7 @@ require(tidyr)
 require(dplyr)
 require(ggplot2)
 
-setwd("C:/Users/Corey/Documents/DataVisualization/DV_RProject2/01 Data")
+setwd("C:/Users/Nathan R/Documents/DataVisualization/Project 2/01 Data")
 
 file_path <- "Fortune 500 Companies.csv"
 

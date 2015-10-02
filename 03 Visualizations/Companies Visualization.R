@@ -12,9 +12,9 @@ ggplot() +
   #facet_grid(.~SURVIVED, labeller=label_both) + # Same as facet_wrap but with a label.
   #facet_grid(PCLASS~SURVIVED, labeller=label_both) +
   labs(title='Titanic') +
-  labs(x="Age", y=paste("Fare")) +
-  layer(data=df, 
-        mapping=aes(x=as.numeric(as.character(AGE)), y=as.numeric(as.character(FARE)), color=SEX), 
+  labs(x="Company", y=paste("Profit")) +
+  layer(data=X, 
+        mapping=aes(x=as.numeric(as.character(COMPANY)), y=as.numeric(as.character(PROFIT_IN_MILLIONS_)), color=YEAR), 
         stat="identity", 
         stat_params=list(), 
         geom="point",
