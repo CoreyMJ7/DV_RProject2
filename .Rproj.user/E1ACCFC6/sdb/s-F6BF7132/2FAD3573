@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1443755506377.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "2FAD3573",
+    "lastKnownWriteTime" : 21392300099829876,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "ncagymz4n1",
+        "caption" : "df",
+        "contentUrl" : "grid_resource/gridviewer.html?env=_rs_no_env&obj=df&cache_key=ncagymz4n1",
+        "displayedObservations" : 29500,
+        "environment" : "_rs_no_env",
+        "object" : "df",
+        "totalObservations" : 29500,
+        "variables" : 5
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
