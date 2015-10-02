@@ -11,24 +11,29 @@ output: html_document
 #####1. Using GitHub, create a Repo
 #####2. Clone the Repository into the Data Visualization Folder (Or the folder you wish)
 #####3. Create R Studio Folders for all the project development (folder descriptions below)
-#####4. Using Oracle SQL Developer paste the titanic data set into the database's worksheet
-#####5. Use a query statement in the  TitanicAnalysis.R file (in data folder) to build one or more data frame (we did 4) with the titanic data from the Oracle     database to be built within the environment. 
-##### 6. Edit each data frame to gather desired data.(With null, without null, age<10, etc.)
-#####7. Generate the require plots in the visualizations folder using ggplot function in a .R file
+#####3. Locate a CSV data file and save it to the data folder
+#####4. Modify the R_ETL.R given and run the code to get the code to develop a SQL table
+#####5. Using Oracle SQL Developer paste the code output from the R_ETL.R script to create a table
+#####5. After the table is created, import the data from the CSV reformattted file to the table
+#####5. Use a query statement similar to the TitanicAnalysis.R file (used in the last project) to build a data frame (we did 4) with the CSV data from Oracle 
+##### 6. Build 3 different workflows using R code and %>%. These will become new dataframes.
+#####7. Generate unique plots from the workflow dataframes
 #####8. Call these files in a .Rmd file using the R markdown command "source" and press Knit HTML to view the data/plots. (Code seen below)
 
 #### Folders Needed
 #####00 Doc: Holds the .Rmd and .html files containing these instructions and project output
-#####01 Data: Gathers the data from the database for and puts it into data frames
-#####02 Visualization: Contains the .R files that use ggplot to generate graph our graphs
+#####01 Data: Generates the code to create the table in Oracle.Gathers the data from the database for and puts it into data frames
+#####02 Data Wrangling: Contains the .R files that use create workflows from the data frame create from the CSV data put into Oracle.
+#####03 Visualization: Contains the .R files that use ggplot to generate graph our graphs
 
 
 #### R markdown code
 #####The .R file is called using the command below. The subsequent code/graphs illustrates the code that goes into
 
+#source("../03 Visualizations/Companies Visualization.R", echo = TRUE)
+```{r}
+source("../00 Doc/RPROFILE.R", echo = TRUE)
+source("../01 Data/Fortune 500 Analysis.R", echo = TRUE)
+source("../02 Data Wrangling/Fortune500 Wrangling.R", echo = TRUE)
 
 ```{r}
-source("../01 Data/Titanic Analysis.R", echo = TRUE)
-source("../02 Visualizations/Visualizations w ggplot.R", echo = TRUE)
-```{r}
-
