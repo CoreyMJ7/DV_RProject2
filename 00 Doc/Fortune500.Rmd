@@ -30,10 +30,10 @@ output: html_document
 #### R markdown code
 #####The .R file is called using the command below. The subsequent code/graphs illustrates the code that goes into
 
-#source("../03 Visualizations/Companies Visualization.R", echo = TRUE)
+
 ```{r}
 source("../00 Doc/RPROFILE.R", echo = TRUE)
 source("../01 Data/Fortune 500 Analysis.R", echo = TRUE)
 source("../02 Data Wrangling/Fortune500 Wrangling.R", echo = TRUE)
-
+source("../03 Visualizations/Companies Visualization.R", echo = TRUE)
 ```{r}
