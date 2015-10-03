@@ -25,9 +25,9 @@ ggplot() +
   coord_cartesian() + 
   scale_x_discrete() +
   scale_y_continuous() +
-  labs(title='Titanic') +
+  labs(title='Top 5 Companies in 1955 Over Time') +
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-  labs(x="SURVIVED", y=paste("FARE")) +
+  labs(x="Year", y=paste("Fortune 500 Rank")) +
   layer(data=Y, 
         mapping=aes(x=as.character(YEAR), y=as.numeric(as.character(RANK)), color=COMPANY), 
         stat="identity", 
