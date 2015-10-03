@@ -1,7 +1,3 @@
-require(tidyr)
-require(dplyr)
-require(ggplot2)
-
 setwd("C:/Users/Nathan R/Documents/DataVisualization/Project 2/01 Data")
 
 file_path <- "Fortune 500 Companies.csv"
@@ -37,8 +33,7 @@ if( length(measures) > 1 || ! is.na(dimensions)) {
 library(lubridate)
 # Fix date columns, this needs to be done by hand because | needs to be correct.
 #                                                        \_/
-df$Order_Date <- gsub(" [0-9]+:.*", "", gsub(" UTC", "", mdy(as.character(df$Order_Date), tz="UTC")))
-df$Ship_Date  <- gsub(" [0-9]+:.*", "", gsub(" UTC", "", mdy(as.character(df$Ship_Date),  tz="UTC")))
+
 
 # The following is an example of dealing with special cases like making state abbreviations be all upper case.
 # df["State"] <- data.frame(lapply(df["State"], toupper))
