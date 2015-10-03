@@ -11,12 +11,13 @@ ggplot() +
   #facet_grid(.~SURVIVED, labeller=label_both) + # Same as facet_wrap but with a label.
   #facet_grid(PCLASS~SURVIVED, labeller=label_both) +
   labs(title='Titanic') +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
   labs(x="Company", y=paste("Profit")) +
   layer(data=V, 
-        mapping=aes(x=as.numeric(as.character(COMPANY)), y=as.numeric(as.character(rev_percent)), color=Ninety_Percentile), 
+        mapping=aes((x=COMPANY), y=(Rev), color=Ninety_Percentile), 
         stat="identity", 
         stat_params=list(), 
-        geom="point",
+        geom="bar",
         geom_params=list(), 
         #position=position_identity()
         position=position_jitter(width=0.3, height=0)
